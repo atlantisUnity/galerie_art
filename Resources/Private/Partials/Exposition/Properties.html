@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-exposition-qnvt" >
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.nom" />
+		</td>
+		<td>
+		{exposition.nom}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.oeuvres" />
+		</td>
+		<td>
+		{exposition.oeuvres}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.horaires" />
+		</td>
+		<td>
+		{exposition.horaires}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.description" />
+		</td>
+		<td>
+		{exposition.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.visuel" />
+		</td>
+		<td>
+				<f:image src="{exposition.visuel.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.lieux" />
+		</td>
+		<td>
+		{exposition.lieux}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.tarif" />
+		</td>
+		<td>
+		{exposition.tarif}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.datedbt" />
+		</td>
+		<td>
+		{exposition.datedbt -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionqnvt_domain_model_exposition.datefin" />
+		</td>
+		<td>
+		{exposition.datefin -> f:format.date()}
+		</td>
+	</tr>
+</table>
+</html>

@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    953,
-                    218
+                    622,
+                    184
                 ]
             },
             "name": "New Model Object",
@@ -156,8 +156,8 @@
         {
             "config": {
                 "position": [
-                    372,
-                    366
+                    367,
+                    324
                 ]
             },
             "name": "New Model Object",
@@ -266,8 +266,8 @@
         {
             "config": {
                 "position": [
-                    129,
-                    302
+                    131,
+                    314
                 ]
             },
             "name": "New Model Object",
@@ -278,7 +278,9 @@
                     "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "search"
+                    ]
                 },
                 "name": "Artiste",
                 "objectsettings": {
@@ -389,8 +391,8 @@
         {
             "config": {
                 "position": [
-                    60,
-                    114
+                    128,
+                    131
                 ]
             },
             "name": "New Model Object",
@@ -449,8 +451,8 @@
         {
             "config": {
                 "position": [
-                    624,
-                    172
+                    368,
+                    146
                 ]
             },
             "name": "New Model Object",
@@ -584,7 +586,17 @@
                 "role": "Developer"
             }
         ],
-        "plugins": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Artiste =>list,show\nOeuvres => list,show,hightlight\nExposition => list,show",
+                    "noncacheableActions": "Artiste => search",
+                    "switchableActions": "Agenda expositions\nExposition->list; Exposition->show;\nGalerie\nOeuvres->list;Oeuvres->show;\nMise en valeur\nOeuvres->hightlight;\nListe des artistes\nArtiste->list;Artiste->show;Artiste->search;"
+                },
+                "key": "pi1",
+                "name": "Expo qnvt"
+            }
+        ],
         "vendorName": "Qnvt"
     },
     "wires": [
@@ -638,7 +650,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-06-07 10:14",
+        "last_modified": "2018-06-07 01:20",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }
