@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:00Z" product-name="exposition_qnvt">
+		<header/>
+		<body>
+			<trans-unit id="nom.description">
+				<source>nom</source>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>longitude</source>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<source>adresse</source>
+			</trans-unit>
+			<trans-unit id="code_postal.description">
+				<source>code_postal</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>descsription</source>
+			</trans-unit>
+			<trans-unit id="accessible_p_m_r.description">
+				<source>accessiblePMR</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

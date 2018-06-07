@@ -1,0 +1,14 @@
+{
+    "name": "qnvt/exposition-qnvt",
+    "type": "typo3-cms-extension",
+    "description": "Projet exposition",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qnvt\\ExpositionQnvt\\": "Classes"
+        }
+    }
+}

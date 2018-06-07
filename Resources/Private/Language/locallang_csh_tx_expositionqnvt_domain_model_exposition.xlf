@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:00Z" product-name="exposition_qnvt">
+		<header/>
+		<body>
+			<trans-unit id="nom.description">
+				<source>nom</source>
+			</trans-unit>
+			<trans-unit id="oeuvres.description">
+				<source>oeuvres</source>
+			</trans-unit>
+			<trans-unit id="horaires.description">
+				<source>horaires</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="visuel.description">
+				<source>visuel</source>
+			</trans-unit>
+			<trans-unit id="lieux.description">
+				<source>lieux</source>
+			</trans-unit>
+			<trans-unit id="tarif.description">
+				<source>tarif</source>
+			</trans-unit>
+			<trans-unit id="datedbt.description">
+				<source>date_dbt</source>
+			</trans-unit>
+			<trans-unit id="datefin.description">
+				<source>date_fin</source>
+			</trans-unit>
+			<trans-unit id="lieu.description">
+				<source>Lieu</source>
+			</trans-unit>
+			<trans-unit id="oeuvres_e.description">
+				<source>Oeuvres</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
