@@ -18,16 +18,19 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <h1 class="title">Liste des artistes</h1>
 <div class="actions_bar">
-  <f:link.action action="new" class="btn btn-warning orange">New Artiste</f:link.action>
+  <f:link.action action="new" class="btn btn-warning">Ajouter un artiste</f:link.action>
 </div>
+
   <f:flashMessages />
-  	<f:for each="{artistes}" as="artiste">
+  <div class="list_artistes">
+  <f:widget.paginate objects="{artistes}" as="paginatedArtistes" configuration="{itemsPerPage: 1, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+  	<f:for each="{paginatedArtistes}" as="artiste">
     <div class="col-md-4">
-      <div class="panel panel-default ">
-          <f:image image="{artiste.photo}" class="author_picture"/>
-          <div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action> ( {artiste.dateNaissance -> f:format.date()}/ {artiste.dateDeces -> f:format.date()})</div>
-          <div class="panel-body"><div><f:format.html>{artiste.biographie}</f:format.html></div></div>
-          <div class="panel-body">
+      <div class="panel panel-default card">
+          <f:image image="{artiste.photo}" class="author_thumbnail"/>
+          <div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action> ({artiste.dateNaissance -> f:format.date()} / {artiste.dateDeces -> f:format.date()})</div>
+          <div class="panel-body author">
+            <div class="biography"><f:format.html>{artiste.biographie}</f:format.html></div>
             <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
             <i><f:format.html>{artiste.influences}</f:format.html></i>
           </div>
@@ -37,5 +40,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
       </div>
     </div>
     </f:for>
+    </f:widget.paginate>
+  </div>
 </f:section>
 </html>
