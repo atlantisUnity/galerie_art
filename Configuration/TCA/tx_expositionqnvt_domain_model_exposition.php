@@ -197,22 +197,20 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:exposition_qnvt/Resources/Private/Language/locallang_db.xlf:tx_expositionqnvt_domain_model_exposition.datedbt',
             'config' => [
-                'dbType' => 'datetime',
                 'type' => 'input',
-                'size' => 12,
+                'size' => 10,
                 'eval' => 'datetime,required',
-                'default' => '0000-00-00 00:00:00'
+                'default' => time()
             ],
         ],
         'datefin' => [
             'exclude' => true,
             'label' => 'LLL:EXT:exposition_qnvt/Resources/Private/Language/locallang_db.xlf:tx_expositionqnvt_domain_model_exposition.datefin',
             'config' => [
-                'dbType' => 'datetime',
                 'type' => 'input',
-                'size' => 12,
+                'size' => 10,
                 'eval' => 'datetime,required',
-                'default' => '0000-00-00 00:00:00'
+                'default' => time()
             ],
         ],
         'lieu' => [

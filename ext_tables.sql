@@ -11,8 +11,8 @@ CREATE TABLE tx_expositionqnvt_domain_model_exposition (
 	description text,
 	visuel int(11) unsigned NOT NULL default '0',
 	tarif text,
-	datedbt datetime DEFAULT '0000-00-00 00:00:00',
-	datefin datetime DEFAULT '0000-00-00 00:00:00',
+	datedbt int(11) DEFAULT '0' NOT NULL,
+	datefin int(11) DEFAULT '0' NOT NULL,
 	lieu int(11) unsigned DEFAULT '0' NOT NULL,
 	oeuvres int(11) unsigned DEFAULT '0' NOT NULL,
 

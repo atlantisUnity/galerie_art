@@ -90,7 +90,7 @@
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": true,
                             "propertyName": "datedbt",
-                            "propertyType": "NativeDateTime",
+                            "propertyType": "DateTime",
                             "uid": "1506507553800"
                         },
                         {
@@ -100,7 +100,7 @@
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": true,
                             "propertyName": "datefin",
-                            "propertyType": "NativeDateTime",
+                            "propertyType": "DateTime",
                             "uid": "945742071598"
                         }
                     ]
@@ -630,7 +630,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-07-05 09:44",
+        "last_modified": "2018-07-05 10:56",
         "extension_builder_version": "8.7.0",
         "be_user": " (2)"
     }
