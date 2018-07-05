@@ -12,37 +12,30 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
+
+
 <f:section name="main">
-<h1>Listing for Artiste</h1>
 
-<f:flashMessages />
-
-<table  class="tx_expositionqnvt" >
-	<tr>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.photo" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.nom" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.biographie" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.date_naissance" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.date_deces" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
-
-	<f:for each="{artistes}" as="artiste">
-		<tr>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.photo.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.biographie}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.dateNaissance -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.dateDeces -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.influences}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{artiste : artiste}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{artiste : artiste}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new">New Artiste</f:link.action>
+<h1 class="title">Liste des artistes</h1>
+<div class="actions_bar">
+  <f:link.action action="new" class="btn btn-warning orange">New Artiste</f:link.action>
+</div>
+  <f:flashMessages />
+  	<f:for each="{artistes}" as="artiste">
+    <div class="col-md-4">
+      <div class="panel panel-default ">
+          <f:image image="{artiste.photo}" class="author_picture"/>
+          <div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action> ( {artiste.dateNaissance -> f:format.date()}/ {artiste.dateDeces -> f:format.date()})</div>
+          <div class="panel-body"><div><f:format.html>{artiste.biographie}</f:format.html></div></div>
+          <div class="panel-body">
+            <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
+            <i><f:format.html>{artiste.influences}</f:format.html></i>
+          </div>
+         <div class="panel-footer">
+           <f:link.action action="delete" class="btn btn-primary" arguments="{artiste : artiste}">Voir ses œuvres</f:link.action>
+         </div>
+      </div>
+    </div>
+    </f:for>
 </f:section>
 </html>

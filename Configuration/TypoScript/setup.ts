@@ -22,6 +22,8 @@ plugin.tx_expositionqnvt_pi1 {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+	
+
 }
 
 # these classes are only used in auto-generated templates
@@ -57,3 +59,6 @@ plugin.tx_expositionqnvt._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+
+page.includeCSS.expositionqnvt = EXT:exposition_qnvt/Resources/Public/css/custom.css
+plugin.tx_expositionqnvt_pi1.persistence.storagePid >
