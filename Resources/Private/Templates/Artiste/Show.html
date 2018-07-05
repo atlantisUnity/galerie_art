@@ -13,11 +13,24 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Single View for Artiste</h1>
-
+<div class="btn_return">
+  <f:link.action action="list" class="btn btn-primary">Retour à la liste</f:link.action>
+</div>
 <f:flashMessages />
-<f:render partial="Artiste/Properties" arguments="{artiste:artiste}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Artiste</f:link.action>
+<h1 class="author_name"><b>{artiste.nom}</b>&nbsp;<i>({artiste.dateNaissance -> f:format.date()} / {artiste.dateDeces -> f:format.date()})</i></h1>
+    <div class="col-md-3">
+<f:image image="{artiste.photo}" class="author_portrait"/>
+</div>
+  <div class="col-md-9">
+
+<div class="biography"><f:format.html>{artiste.biographie}</f:format.html></div>
+<b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
+<i><f:format.html>{artiste.influences}</f:format.html></i>
+<b><f:translate key="tx_expositionqnvt_domain_model_artiste.nationalite" /> : </b>
+<i><p>{artiste.nationalite.0.nom}<p></i>
+<div class="">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+</div>
 	</f:section>
 </html>
