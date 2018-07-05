@@ -85,3 +85,24 @@ div.list_artistes ul li.current, div.list_artistes ul li:hover {
   background-color: #efefef;
   color: #10a0cb;
 }
+div.expo {
+  border-bottom: 1px solid #d8d8d8;
+}
+h2.expo_name a {
+  color: #f49542;
+  font-weight: bold;
+}
+div.expo_dates span:not(:first-child) {
+  font-weight: bold;
+}
+div.expo_show {
+  margin: 20px 0;
+}
+div.expo_show a {
+  color: white;
+  font-weight: bold;
+  border: 1px solid coral;
+  background-color: coral;
+  border-radius: 5px;
+  padding: 3px 12px;
+}

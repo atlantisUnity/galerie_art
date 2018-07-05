@@ -13,24 +13,25 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Exposition</h1>
+<h1 class="title">Liste des Expositions</h1>
 
 <f:flashMessages />
+<f:for each="{expositions}" as="exposition">
+    <div class="expo">
+        <h2 class="expo_name"><f:link.action action="show" arguments="{exposition : exposition}">{exposition.nom}</f:link.action></h2>
+        <div class="expo_dates">
+          <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Du <span>{exposition.datedbt -> f:format.date(format: "d/m/y")}</span> au <span>{exposition.datefin -> f:format.date(format: "d/m/y")}</span>
+        </div>
+        <div class="expo_lieu">
+          <span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;{exposition.lieu.0.nom}
+        </div>
+        <div class="expo_show">
+            <f:link.action action="show" class="btn btn-default" arguments="{exposition : exposition}">En savoir plus</f:link.action>
+        </div>
+    </div>
+</f:for>
 
-<table  class="tx_expositionqnvt" >
-	<tr>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.nom" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.horaires" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.description" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.visuel" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.tarif" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.datedbt" /></th>
-		<th><f:translate key="tx_expositionqnvt_domain_model_exposition.datefin" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
-
-	<f:for each="{expositions}" as="exposition">
+	<!-- <f:for each="{expositions}" as="exposition">
 		<tr>
 			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.horaires}</f:link.action></td>
@@ -45,6 +46,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	</f:for>
 </table>
 
-<f:link.action action="new">New Exposition</f:link.action>
+<f:link.action action="new">New Exposition</f:link.action> -->
 </f:section>
 </html>
