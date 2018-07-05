@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T13:20:06Z" product-name="exposition_qnvt">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-05T09:44:49Z" product-name="exposition_qnvt">
 		<header/>
 		<body>
 			<trans-unit id="nom.description">
 				<source>nom</source>
-			</trans-unit>
-			<trans-unit id="oeuvres.description">
-				<source>oeuvres</source>
 			</trans-unit>
 			<trans-unit id="horaires.description">
 				<source>horaires</source>
@@ -17,9 +14,6 @@
 			</trans-unit>
 			<trans-unit id="visuel.description">
 				<source>visuel</source>
-			</trans-unit>
-			<trans-unit id="lieux.description">
-				<source>lieux</source>
 			</trans-unit>
 			<trans-unit id="tarif.description">
 				<source>tarif</source>
@@ -33,7 +27,7 @@
 			<trans-unit id="lieu.description">
 				<source>Lieu</source>
 			</trans-unit>
-			<trans-unit id="oeuvres_e.description">
+			<trans-unit id="oeuvres.description">
 				<source>Oeuvres</source>
 			</trans-unit>
 		</body>

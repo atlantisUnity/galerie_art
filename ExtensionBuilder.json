@@ -46,16 +46,6 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "oeuvres",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "oeuvres",
-                            "propertyType": "String",
-                            "uid": "686672473997"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
                             "propertyDescription": "horaires",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
@@ -82,16 +72,6 @@
                             "propertyName": "visuel",
                             "propertyType": "Image",
                             "uid": "1416376329857"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "lieux",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "lieux",
-                            "propertyType": "String",
-                            "uid": "403141810879"
                         },
                         {
                             "allowedFileTypes": "",
@@ -133,9 +113,9 @@
                             "propertyIsExcludeField": true,
                             "relationDescription": "Lieu",
                             "relationName": "lieu",
-                            "relationType": "zeroToMany",
+                            "relationType": "manyToMany",
                             "relationWire": "[wired]",
-                            "renderType": "selectSingle",
+                            "renderType": "selectSingleBox",
                             "uid": "314746628886"
                         },
                         {
@@ -143,7 +123,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "Oeuvres",
-                            "relationName": "oeuvresE",
+                            "relationName": "oeuvres",
                             "relationType": "manyToMany",
                             "relationWire": "[wired]",
                             "renderType": "selectSingleBox",
@@ -650,8 +630,8 @@
         }
     ],
     "log": {
-        "last_modified": "2018-06-07 01:20",
+        "last_modified": "2018-07-05 09:44",
         "extension_builder_version": "8.7.0",
-        "be_user": " (1)"
+        "be_user": " (2)"
     }
 }

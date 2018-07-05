@@ -179,10 +179,5 @@ return [
             ]
         ],
     
-        'exposition' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
     ],
 ];

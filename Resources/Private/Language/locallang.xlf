@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T13:20:06Z" product-name="exposition_qnvt">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-05T09:44:49Z" product-name="exposition_qnvt">
 		<header/>
 		<body>
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition">
@@ -8,9 +8,6 @@
 			</trans-unit>
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition.nom">
 				<source>Nom</source>
-			</trans-unit>
-			<trans-unit id="tx_expositionqnvt_domain_model_exposition.oeuvres">
-				<source>Oeuvres</source>
 			</trans-unit>
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition.horaires">
 				<source>Horaires</source>
@@ -20,9 +17,6 @@
 			</trans-unit>
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition.visuel">
 				<source>Visuel</source>
-			</trans-unit>
-			<trans-unit id="tx_expositionqnvt_domain_model_exposition.lieux">
-				<source>Lieux</source>
 			</trans-unit>
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition.tarif">
 				<source>Tarif</source>
@@ -36,8 +30,8 @@
 			<trans-unit id="tx_expositionqnvt_domain_model_exposition.lieu">
 				<source>Lieu</source>
 			</trans-unit>
-			<trans-unit id="tx_expositionqnvt_domain_model_exposition.oeuvres_e">
-				<source>Oeuvres E</source>
+			<trans-unit id="tx_expositionqnvt_domain_model_exposition.oeuvres">
+				<source>Oeuvres</source>
 			</trans-unit>
 			<trans-unit id="tx_expositionqnvt_domain_model_lieu">
 				<source>Lieu</source>

@@ -55,31 +55,6 @@ class ExpositionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getOeuvresReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getOeuvres()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setOeuvresForStringSetsOeuvres()
-    {
-        $this->subject->setOeuvres('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'oeuvres',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getHorairesReturnsInitialValueForString()
     {
         self::assertSame(
@@ -149,31 +124,6 @@ class ExpositionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             $fileReferenceFixture,
             'visuel',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getLieuxReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getLieux()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setLieuxForStringSetsLieux()
-    {
-        $this->subject->setLieux('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'lieux',
             $this->subject
         );
     }
@@ -321,28 +271,28 @@ class ExpositionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getOeuvresEReturnsInitialValueForOeuvres()
+    public function getOeuvresReturnsInitialValueForOeuvres()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
-            $this->subject->getOeuvresE()
+            $this->subject->getOeuvres()
         );
     }
 
     /**
      * @test
      */
-    public function setOeuvresEForObjectStorageContainingOeuvresSetsOeuvresE()
+    public function setOeuvresForObjectStorageContainingOeuvresSetsOeuvres()
     {
-        $oeuvresE = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
-        $objectStorageHoldingExactlyOneOeuvresE = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneOeuvresE->attach($oeuvresE);
-        $this->subject->setOeuvresE($objectStorageHoldingExactlyOneOeuvresE);
+        $oeuvre = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
+        $objectStorageHoldingExactlyOneOeuvres = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneOeuvres->attach($oeuvre);
+        $this->subject->setOeuvres($objectStorageHoldingExactlyOneOeuvres);
 
         self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneOeuvresE,
-            'oeuvresE',
+            $objectStorageHoldingExactlyOneOeuvres,
+            'oeuvres',
             $this->subject
         );
     }
@@ -350,34 +300,34 @@ class ExpositionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function addOeuvresEToObjectStorageHoldingOeuvresE()
+    public function addOeuvreToObjectStorageHoldingOeuvres()
     {
-        $oeuvresE = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
-        $oeuvresEObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $oeuvre = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
+        $oeuvresObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $oeuvresEObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($oeuvresE));
-        $this->inject($this->subject, 'oeuvresE', $oeuvresEObjectStorageMock);
+        $oeuvresObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($oeuvre));
+        $this->inject($this->subject, 'oeuvres', $oeuvresObjectStorageMock);
 
-        $this->subject->addOeuvresE($oeuvresE);
+        $this->subject->addOeuvre($oeuvre);
     }
 
     /**
      * @test
      */
-    public function removeOeuvresEFromObjectStorageHoldingOeuvresE()
+    public function removeOeuvreFromObjectStorageHoldingOeuvres()
     {
-        $oeuvresE = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
-        $oeuvresEObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $oeuvre = new \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres();
+        $oeuvresObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $oeuvresEObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($oeuvresE));
-        $this->inject($this->subject, 'oeuvresE', $oeuvresEObjectStorageMock);
+        $oeuvresObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($oeuvre));
+        $this->inject($this->subject, 'oeuvres', $oeuvresObjectStorageMock);
 
-        $this->subject->removeOeuvresE($oeuvresE);
+        $this->subject->removeOeuvre($oeuvre);
     }
 }

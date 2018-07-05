@@ -22,7 +22,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * intitule
-     *
+     * 
      * @var string
      * @validate NotEmpty
      */
@@ -30,7 +30,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * date
-     *
+     * 
      * @var \DateTime
      * @validate NotEmpty
      */
@@ -38,28 +38,28 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * description
-     *
+     * 
      * @var string
      */
     protected $description = '';
 
     /**
      * type
-     *
+     * 
      * @var int
      */
     protected $type = 0;
 
     /**
      * dimensions
-     *
+     * 
      * @var string
      */
     protected $dimensions = '';
 
     /**
      * Returns the intitule
-     *
+     * 
      * @return string $intitule
      */
     public function getIntitule()
@@ -69,7 +69,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the intitule
-     *
+     * 
      * @param string $intitule
      * @return void
      */
@@ -80,7 +80,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the date
-     *
+     * 
      * @return \DateTime $date
      */
     public function getDate()
@@ -90,7 +90,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the date
-     *
+     * 
      * @param \DateTime $date
      * @return void
      */
@@ -101,7 +101,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the description
-     *
+     * 
      * @return string $description
      */
     public function getDescription()
@@ -111,7 +111,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the description
-     *
+     * 
      * @param string $description
      * @return void
      */
@@ -122,7 +122,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the type
-     *
+     * 
      * @return int $type
      */
     public function getType()
@@ -132,7 +132,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the type
-     *
+     * 
      * @param int $type
      * @return void
      */
@@ -143,7 +143,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the dimensions
-     *
+     * 
      * @return string $dimensions
      */
     public function getDimensions()
@@ -153,7 +153,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the dimensions
-     *
+     * 
      * @param string $dimensions
      * @return void
      */

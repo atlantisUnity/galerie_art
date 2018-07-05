@@ -22,7 +22,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 {
     /**
      * oeuvresRepository
-     *
+     * 
      * @var \Qnvt\ExpositionQnvt\Domain\Repository\OeuvresRepository
      * @inject
      */
@@ -30,7 +30,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action list
-     *
+     * 
      * @return void
      */
     public function listAction()
@@ -41,7 +41,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action show
-     *
+     * 
      * @param \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres $oeuvres
      * @return void
      */
@@ -52,7 +52,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action hightlight
-     *
+     * 
      * @return void
      */
     public function hightlightAction()

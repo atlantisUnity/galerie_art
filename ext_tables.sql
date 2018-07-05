@@ -7,16 +7,14 @@ CREATE TABLE tx_expositionqnvt_domain_model_exposition (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	nom varchar(255) DEFAULT '' NOT NULL,
-	oeuvres varchar(255) DEFAULT '' NOT NULL,
 	horaires text,
 	description text,
 	visuel int(11) unsigned NOT NULL default '0',
-	lieux varchar(255) DEFAULT '' NOT NULL,
 	tarif text,
 	datedbt datetime DEFAULT '0000-00-00 00:00:00',
 	datefin datetime DEFAULT '0000-00-00 00:00:00',
 	lieu int(11) unsigned DEFAULT '0' NOT NULL,
-	oeuvres_e int(11) unsigned DEFAULT '0' NOT NULL,
+	oeuvres int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -55,8 +53,6 @@ CREATE TABLE tx_expositionqnvt_domain_model_lieu (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
-
-	exposition int(11) unsigned DEFAULT '0' NOT NULL,
 
 	nom varchar(255) DEFAULT '' NOT NULL,
 	latitude varchar(255) DEFAULT '' NOT NULL,
@@ -233,12 +229,17 @@ CREATE TABLE tx_expositionqnvt_domain_model_oeuvres (
 );
 
 #
-# Table structure for table 'tx_expositionqnvt_domain_model_lieu'
+# Table structure for table 'tx_expositionqnvt_exposition_lieu_mm'
 #
-CREATE TABLE tx_expositionqnvt_domain_model_lieu (
+CREATE TABLE tx_expositionqnvt_exposition_lieu_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 
-	exposition int(11) unsigned DEFAULT '0' NOT NULL,
-
+	PRIMARY KEY (uid_local,uid_foreign),
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
 );
 
 #
