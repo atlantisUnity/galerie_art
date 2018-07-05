@@ -1,7 +1,6 @@
 <?php
 namespace Qnvt\ExpositionQnvt\Controller;
 
-use Qnvt\ExpositionQnvt\Classes\Domain\Model\Artiste;
 /***
  *
  * This file is part of the "exposition qnvt" Extension for TYPO3 CMS.
