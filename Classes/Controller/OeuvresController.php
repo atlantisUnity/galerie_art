@@ -23,7 +23,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 {
     /**
      * oeuvresRepository
-     * 
+     *
      * @var \Qnvt\ExpositionQnvt\Domain\Repository\OeuvresRepository
      * @inject
      */
@@ -31,7 +31,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -42,7 +42,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action show
-     * 
+     *
      * @param \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres $oeuvres
      * @return void
      */
@@ -53,7 +53,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action hightlight
-     * 
+     *
      * @return void
      */
     public function hightlightAction()
@@ -63,25 +63,32 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action search
-     * 
+     *
      * @param \Qnvt\ExpositionQnvt\MVC\Search $search
      * @return void
      */
     public function searchAction(\Qnvt\ExpositionQnvt\MVC\Search $search)
     {
-        if (!empty($search->getIntitule()) && !empty($search->getType())) {
-            $oeuvres = $this->oeuvresRepository->findByIntituleAndType($search->getIntitule(), $search->getType());
-        } else {
-            if (!empty($search->getIntitule())) {
-                $oeuvres = $this->oeuvresRepository->findByIntitule($search->getIntitule());
-            } else {
-                if (!empty($search->getType())) {
-                    $oeuvres = $this->oeuvresRepository->findByType($search->getType());
-                } else {
-                    $oeuvre = null;
-                }
-            }
+        $type = 0;
+        if(mb_strtoupper($search->getType()) == "PEINTURE"){
+            $type = 2;
+        }elseif (mb_strtoupper($search->getType()) == "SCULPTURE"){
+            $type = 1;
         }
+
+        if (!empty($search->getIntitule()) && !empty($search->getType())) {
+            $oeuvres = $this->oeuvresRepository->findByIntituleAndType($search->getIntitule(),$type);
+        }
+        else if (!empty($search->getIntitule())) {
+            $oeuvres = $this->oeuvresRepository->findByIntitule($search->getIntitule());
+        }
+        else if (!empty($search->getType())) {
+            $oeuvres = $this->oeuvresRepository->findByType($type);
+        }
+        else {
+            $oeuvre = null;
+        }
+
         $this->view->assign('oeuvres', $oeuvres);
     }
 }
