@@ -1,3 +1,6 @@
+.clear{
+  clear: both;
+}
 
 h1.title{
 text-align: center;
@@ -62,21 +65,21 @@ div.card{
 -moz-box-shadow: 3px 3px 10px 0px rgba(102,102,102,0.52);
 box-shadow: 3px 3px 10px 0px rgba(102,102,102,0.52);
 }
-div.list_artistes ul {
+div.list_artistes ul, div.oeuvres_list ul {
   padding-left: 20px;
 }
-div.list_artistes ul li {
+div.list_artistes ul li, div.oeuvres_list ul li {
       display: inline;
       padding: 5px 10px;
       border: 1px solid #d8d8d8;
       border-right: none;
       cursor: pointer;
 }
-div.list_artistes ul li:first-child {
+div.list_artistes ul li:first-child, div.oeuvres_list ul li:first-child{
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-div.list_artistes ul li:last-child {
+div.list_artistes ul li:last-child,div.oeuvres_list ul li:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-right: 1px solid #d8d8d8;
@@ -86,9 +89,10 @@ div.list_artistes ul li.current, div.list_artistes ul li:hover {
   color: #10a0cb;
 }
 div.expo {
+  margin-top: 20px;
   border-bottom: 1px solid #d8d8d8;
 }
-h2.expo_name a {
+h2.expo_name a, h1.expo_name{
   color: #f49542;
   font-weight: bold;
 }
@@ -105,4 +109,28 @@ div.expo_show a {
   background-color: coral;
   border-radius: 5px;
   padding: 3px 12px;
+}
+
+img.expo{
+  margin: 0 auto 30px;
+  display: block;
+}
+
+div.expo_description{
+  margin-bottom: 20px;
+}
+
+div.oeuvres_list{
+margin-top: 50px;
+}
+
+div.oeuvres_list img.oeuvre_thumbnail {
+     width: 100%;
+     display: block;
+     margin: auto;
+     height: 210px;
+}
+
+div.oeuvres_list img.oeuvre_thumbnail:hover {
+     transform: scale(1.2);
 }

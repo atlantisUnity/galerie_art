@@ -17,10 +17,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 
 <h1 class="title">Liste des artistes</h1>
-<div class="actions_bar">
-  <f:link.action action="new" class="btn btn-warning">Ajouter un artiste</f:link.action>
-</div>
 
+<f:debug>{artistes}</f:debug>
   <f:flashMessages />
   <div class="list_artistes">
   <f:widget.paginate objects="{artistes}" as="paginatedArtistes" configuration="{itemsPerPage: 1, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">

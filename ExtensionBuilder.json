@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    622,
-                    184
+                    621,
+                    183
                 ]
             },
             "name": "New Model Object",
@@ -138,8 +138,8 @@
         {
             "config": {
                 "position": [
-                    367,
-                    324
+                    366,
+                    323
                 ]
             },
             "name": "New Model Object",
@@ -248,8 +248,8 @@
         {
             "config": {
                 "position": [
-                    131,
-                    314
+                    130,
+                    313
                 ]
             },
             "name": "New Model Object",
@@ -373,8 +373,8 @@
         {
             "config": {
                 "position": [
-                    128,
-                    131
+                    127,
+                    130
                 ]
             },
             "name": "New Model Object",
@@ -433,8 +433,8 @@
         {
             "config": {
                 "position": [
-                    368,
-                    146
+                    367,
+                    145
                 ]
             },
             "name": "New Model Object",
@@ -643,8 +643,8 @@
         }
     ],
     "log": {
-        "last_modified": "2018-07-05 01:19",
+        "last_modified": "2018-07-06 03:07",
         "extension_builder_version": "8.7.0",
-        "be_user": " (1)"
+        "be_user": " (2)"
     }
 }

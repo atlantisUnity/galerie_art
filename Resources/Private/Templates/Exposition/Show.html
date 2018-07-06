@@ -13,11 +13,50 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Single View for Exposition</h1>
+<div class="btn_return">
+  <f:link.action action="list" class="btn btn-primary">Retour à la liste</f:link.action>
+</div>
+<h1 class="author_name expo_name">{exposition.nom}</h1>
+<div>
+  <f:image class="expo" src="{exposition.visuel.originalResource.publicUrl}" width="300"/>
+</div>
+<div class="col-md-12 expo_description">
+  <b>Lieu de l'événement</b></br>
+{exposition.lieu.0.nom}
+</div>
+<div class="col-md-12 expo_description">
+  <b>Description de l'événement:</b></br>
+{exposition.description}
+</div>
+<div class="expo_content">
+  <div class="col-md-4">
+    <b><f:translate key="tx_expositionqnvt_domain_model_exposition.horaires" />:</b></br>
+    {exposition.horaires}
+  </div>
+  <div class="col-md-4">
+    <b><f:translate key="tx_expositionqnvt_domain_model_exposition.tarif" />:</b></br>
+    {exposition.tarif}
+  </div>
+  <div class="expo_dates col-md-4">
+    <b>Dates de l'événement:</b></br>
+    <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Du <span>{exposition.datedbt -> f:format.date(format: "d/m/y")}</span> au <span>{exposition.datefin -> f:format.date(format: "d/m/y")}</span>
+  </div>
+</div>
+<div class="clear"></div>
+
+<div class="col-md-12 oeuvres_list">
+  <h2 style="margin-bottom:30px;">Oeuvres exposées:</h2>
+  <f:widget.paginate objects="{exposition.oeuvres}" as="paginatedOeuvres" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+  <f:for each="{paginatedOeuvres}" as="oeuvre">
+  <div class="col-md-3">
+      <f:image image="{oeuvre.image}" class="oeuvre_thumbnail"/>
+  </div>
+  </f:for>
+  </f:widget.paginate>
+</div>
+
 
 <f:flashMessages />
-<f:render partial="Exposition/Properties" arguments="{exposition:exposition}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Exposition</f:link.action>
+<!-- <f:render partial="Exposition/Properties" arguments="{exposition:exposition}" /> -->
 	</f:section>
 </html>
