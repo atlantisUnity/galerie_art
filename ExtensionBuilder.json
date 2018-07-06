@@ -15,7 +15,9 @@
                     "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "search"
+                    ]
                 },
                 "name": "Exposition",
                 "objectsettings": {
@@ -444,7 +446,8 @@
                     "_default3_edit_update": false,
                     "_default4_delete": false,
                     "customActions": [
-                        "hightlight"
+                        "hightlight",
+                        "search"
                     ]
                 },
                 "name": "Oeuvres",
@@ -640,8 +643,8 @@
         }
     ],
     "log": {
-        "last_modified": "2018-07-05 11:31",
+        "last_modified": "2018-07-05 01:19",
         "extension_builder_version": "8.7.0",
-        "be_user": " (2)"
+        "be_user": " (1)"
     }
 }

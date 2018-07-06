@@ -1,5 +1,6 @@
 <?php
 namespace Qnvt\ExpositionQnvt\Controller;
+use TYPO3\CMS\Extbase\Mvc\Request;
 
 /***
  *
@@ -22,7 +23,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 {
     /**
      * oeuvresRepository
-     * 
+     *
      * @var \Qnvt\ExpositionQnvt\Domain\Repository\OeuvresRepository
      * @inject
      */
@@ -30,18 +31,19 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
     {
         $oeuvres = $this->oeuvresRepository->findAll();
+
         $this->view->assign('oeuvres', $oeuvres);
     }
 
     /**
      * action show
-     * 
+     *
      * @param \Qnvt\ExpositionQnvt\Domain\Model\Oeuvres $oeuvres
      * @return void
      */
@@ -52,11 +54,36 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action hightlight
-     * 
+     *
      * @return void
      */
     public function hightlightAction()
     {
 
+    }
+
+    /**
+     * action search
+     *
+     * @param \Qnvt\ExpositionQnvt\MVC\Search $search
+     * @return void
+     */
+    public function searchAction(\Qnvt\ExpositionQnvt\MVC\Search $search)
+    {
+
+        if (!empty($search->getIntitule()) && !empty($search->getType())) {
+            $oeuvres = $this->oeuvresRepository->findByIntituleAndType($search->getIntitule(),$search->getType());
+        }
+        else if (!empty($search->getIntitule())) {
+            $oeuvres = $this->oeuvresRepository->findByIntitule($search->getIntitule());
+        }
+        else if (!empty($search->getType())) {
+            $oeuvres = $this->oeuvresRepository->findByType($search->getType());
+        }
+        else {
+            $oeuvre = null;
+        }
+
+        $this->view->assign('oeuvres', $oeuvres);
     }
 }

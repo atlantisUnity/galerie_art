@@ -22,7 +22,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 {
     /**
      * expositionRepository
-     * 
+     *
      * @var \Qnvt\ExpositionQnvt\Domain\Repository\ExpositionRepository
      * @inject
      */
@@ -30,7 +30,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -41,12 +41,22 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action show
-     * 
+     *
      * @param \Qnvt\ExpositionQnvt\Domain\Model\Exposition $exposition
      * @return void
      */
     public function showAction(\Qnvt\ExpositionQnvt\Domain\Model\Exposition $exposition)
     {
         $this->view->assign('exposition', $exposition);
+    }
+
+    /**
+     * action search
+     *
+     * @return void
+     */
+    public function searchAction()
+    {
+
     }
 }

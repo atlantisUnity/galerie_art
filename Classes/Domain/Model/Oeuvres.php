@@ -20,8 +20,10 @@ namespace Qnvt\ExpositionQnvt\Domain\Model;
  */
 class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
-	const TYPE_SCULPTURE = 1;
-	const TYPE_PEINTURE = 2;
+    const TYPE_SCULPTURE = 1;
+
+    const TYPE_PEINTURE = 2;
+
     /**
      * intitule
      *

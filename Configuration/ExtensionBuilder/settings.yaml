@@ -48,12 +48,12 @@ overwriteSettings:
 
   Configuration:
     #TCA merge not possible - use overrides directory
-    #TypoScript: keep
+    TypoScript: keep
 
   Resources:
     Private:
       #Language: merge
-      #Templates: keep
+      Templates: keep
 
   user_extension.svg: keep
 
