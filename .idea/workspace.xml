@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a336f5-888e-4e6c-b75e-18d2b0483fe6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Classes/Controller/ExpositionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Controller/ExpositionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Controller/OeuvresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Controller/OeuvresController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Domain/Model/Artiste.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Artiste.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Domain/Model/Exposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Exposition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Domain/Model/Lieu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Lieu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Domain/Model/Nationalite.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Nationalite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Domain/Model/Oeuvres.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Oeuvres.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/Domain/Repository/OeuvresRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/OeuvresRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/MVC/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/MVC/Search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/ExtensionBuilder/settings.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/ExtensionBuilder/settings.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/FlexForms/flexform_pi1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/FlexForms/flexform_pi1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/TypoScript/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/TypoScript/setup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtensionBuilder.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExtensionBuilder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_artiste.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_artiste.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_exposition.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_exposition.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_lieu.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_lieu.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_nationalite.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_nationalite.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_oeuvres.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_csh_tx_expositionqnvt_domain_model_oeuvres.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Language/locallang_db.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Language/locallang_db.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Layouts/Default.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Layouts/Default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/List.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/List.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,10 +47,15 @@
       <file leaf-file-name="List.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="126">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Properties.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Partials/Artiste/Properties.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Search.php" pinned="false" current-in-tab="false">
@@ -84,20 +67,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OeuvresController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OeuvresController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classes/Controller/OeuvresController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="73" column="75" lean-forward="true" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
+            <state relative-caret-position="384">
+              <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OeuvresRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OeuvresRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/OeuvresRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="34" column="107" lean-forward="true" selection-start-line="34" selection-start-column="107" selection-end-line="34" selection-end-column="107" />
+            <state relative-caret-position="442">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="e#55#86#0#PHP" expanded="true" />
               </folding>
@@ -108,8 +91,8 @@
       <file leaf-file-name="Search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="270">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -135,9 +118,9 @@
         <option value="$PROJECT_DIR$/Classes/MVC/Search.php" />
         <option value="$PROJECT_DIR$/Classes/Controller/OeuvresController.php" />
         <option value="$PROJECT_DIR$/Configuration/TypoScript/setup.ts" />
-        <option value="$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/OeuvresRepository.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html" />
       </list>
     </option>
   </component>
@@ -307,12 +290,12 @@
       <updated>1530803792937</updated>
       <workItem from="1530803794069" duration="422000" />
       <workItem from="1530804246417" duration="2416000" />
-      <workItem from="1530875995625" duration="5588000" />
+      <workItem from="1530875995625" duration="7023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8426000" />
+    <option name="totallyTimeSpent" value="9861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -420,20 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/List.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="98" lean-forward="true" selection-start-column="98" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Oeuvres.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -441,27 +410,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/List.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/OeuvresController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="73" column="75" lean-forward="true" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
+        <state>
+          <caret column="98" lean-forward="true" selection-start-column="98" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/OeuvresRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="34" column="107" lean-forward="true" selection-start-line="34" selection-start-column="107" selection-end-line="34" selection-end-column="107" />
+        <state relative-caret-position="442">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="e#55#86#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Partials/Artiste/Properties.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Partials/Oeuvres/List.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Oeuvres/Search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/OeuvresController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
         </state>
       </provider>
     </entry>
