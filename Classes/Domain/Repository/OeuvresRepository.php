@@ -32,7 +32,7 @@ class OeuvresRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             )->andWhere(
                 $queryBuilder->expr()->like(
                     'type',
-                    $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($intitule) . '%'))
+                    $queryBuilder->createNamedParameter($type))
             )
             ->execute()->fetchAll();
 
@@ -55,7 +55,7 @@ class OeuvresRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             ->where(
                 $queryBuilder->expr()->like(
                     'intitule',
-                    $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($intitule) . '%'))
+                    $queryBuilder->createNamedParameter($type))
             )->execute()->fetchAll();
     }
 }
