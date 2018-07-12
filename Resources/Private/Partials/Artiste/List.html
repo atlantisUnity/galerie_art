@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<h1 class="title">Liste des artistes</h1>
+	<f:form action="search" name="search" object="{search}" class="col-md-4">
+		<f:form.textfield property="intitule" class="form-control" class="col-md-8" />
+		<f:form.submit value="Rechercher.." class="col-md-4" />
+	</f:form>
+	<f:flashMessages />
+	<div class="list_artistes">
+		<f:widget.paginate objects="{artistes}" as="paginatedArtistes" configuration="{itemsPerPage: 1, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+			<f:for each="{paginatedArtistes}" as="artiste">
+				<div class="col-md-4">
+					<div class="panel panel-default card">
+						<f:image image="{artiste.photo}" class="author_thumbnail"/>
+						<div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action> ({artiste.dateNaissance -> f:format.date()} / {artiste.dateDeces -> f:format.date()})</div>
+						<div class="panel-body author">
+							<div class="biography"><f:format.html>{artiste.biographie}</f:format.html></div>
+							<b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
+							<i><f:format.html>{artiste.influences}</f:format.html></i>
+						</div>
+						<div class="panel-footer">
+							<f:link.action action="delete" class="btn btn-primary" arguments="{artiste : artiste}">Voir ses œuvres</f:link.action>
+						</div>
+					</div>
+				</div>
+			</f:for>
+		</f:widget.paginate>
+	</div>
+</html>

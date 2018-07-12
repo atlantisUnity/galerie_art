@@ -22,7 +22,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 {
     /**
      * expositionRepository
-     * 
+     *
      * @var \Qnvt\ExpositionQnvt\Domain\Repository\ExpositionRepository
      * @inject
      */
@@ -30,7 +30,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -41,7 +41,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action show
-     * 
+     *
      * @param \Qnvt\ExpositionQnvt\Domain\Model\Exposition $exposition
      * @return void
      */
@@ -52,11 +52,17 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action search
-     * 
+     *
+     * @param \Qnvt\ExpositionQnvt\MVC\Search $search
      * @return void
      */
-    public function searchAction()
+    public function searchAction(\Qnvt\ExpositionQnvt\MVC\Search $search)
     {
-
+        if (!empty($search->getIntitule())) {
+            $oeuvres = $this->expositionRepository->findByNom($search->getIntitule());
+        } else {
+            $oeuvres = $this->expositionRepository->findAll();
+        }
+        $this->view->assign('oeuvres', $oeuvres);
     }
 }

@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<h1 class="title">Liste des Expositions</h1>
+	<f:form action="search" name="search" object="{search}" class="col-md-4">
+		<f:form.textfield property="nom" class="form-control" class="col-md-8" />
+		<f:form.submit value="Rechercher.." class="col-md-4" />
+	</f:form>
+	<f:for each="{expositions}" as="exposition">
+		<div class="expo">
+			<h2 class="expo_name"><f:link.action action="show" arguments="{exposition : exposition}">{exposition.nom}</f:link.action></h2>
+			<div class="expo_dates">
+				<span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Du <span>{exposition.datedbt -> f:format.date(format: "d/m/y")}</span> au <span>{exposition.datefin -> f:format.date(format: "d/m/y")}</span>
+			</div>
+			<div class="expo_lieu">
+				<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;{exposition.lieu.0.nom}
+			</div>
+			<div class="expo_show">
+				<f:link.action action="show" class="btn btn-default" arguments="{exposition : exposition}">En savoir plus</f:link.action>
+			</div>
+		</div>
+	</f:for>
+
+</html>

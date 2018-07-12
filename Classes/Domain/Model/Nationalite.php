@@ -22,7 +22,7 @@ class Nationalite extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nom
-     * 
+     *
      * @var string
      * @validate NotEmpty
      */
@@ -30,14 +30,14 @@ class Nationalite extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * code iso
-     * 
+     *
      * @var string
      */
     protected $codeIso = '';
 
     /**
      * Returns the nom
-     * 
+     *
      * @return string $nom
      */
     public function getNom()
@@ -47,7 +47,7 @@ class Nationalite extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the nom
-     * 
+     *
      * @param string $nom
      * @return void
      */
@@ -58,7 +58,7 @@ class Nationalite extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the codeIso
-     * 
+     *
      * @return string $codeIso
      */
     public function getCodeIso()
@@ -68,7 +68,7 @@ class Nationalite extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the codeIso
-     * 
+     *
      * @param string $codeIso
      * @return void
      */
