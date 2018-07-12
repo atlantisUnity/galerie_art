@@ -49,7 +49,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
   <f:widget.paginate objects="{exposition.oeuvres}" as="paginatedOeuvres" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
   <f:for each="{paginatedOeuvres}" as="oeuvre">
   <div class="col-md-3">
-    <f:debug>{oeuvre}</f:debug>
     <f:link.page pageUid="57"  additionalParams="{tx_expositionqnvt_pi1: {oeuvres: oeuvre.uid, action: 'show'}}" ><f:image image="{oeuvre.image}" class="oeuvre_thumbnail"/></f:link.page>
   </div>
   </f:for>
