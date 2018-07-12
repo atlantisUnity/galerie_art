@@ -13,11 +13,11 @@ padding: 10px 0;
 border-radius: 10px;
 }
 
-div.author{
+div.author, div.oeuvre{
   height: 150px;
 }
 
-div.author p{
+div.author p, div.oeuvre p{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -52,7 +52,7 @@ img.author_portrait {
   border-radius: 5px;
 }
 
-div.panel img.author_thumbnail {
+div.panel img.author_thumbnail{
      width: 50%;
      display: block;
      margin: auto;
@@ -60,31 +60,38 @@ div.panel img.author_thumbnail {
      max-height: 210px;
 }
 
+  div.panel img.oeuvre_thumbnail{
+    width: 50%;
+    display: block;
+    margin: auto;
+    max-height: 210px;
+}
+
 div.card{
 -webkit-box-shadow: 3px 3px 10px 0px rgba(102,102,102,0.52);
 -moz-box-shadow: 3px 3px 10px 0px rgba(102,102,102,0.52);
 box-shadow: 3px 3px 10px 0px rgba(102,102,102,0.52);
 }
-div.list_artistes ul, div.oeuvres_list ul {
+div.list_artistes ul, div.oeuvres_list ul, div.list_oeuvres ul {
   padding-left: 20px;
 }
-div.list_artistes ul li, div.oeuvres_list ul li {
+div.list_artistes ul li, div.oeuvres_list ul li,  div.list_oeuvres ul li {
       display: inline;
       padding: 5px 10px;
       border: 1px solid #d8d8d8;
       border-right: none;
       cursor: pointer;
 }
-div.list_artistes ul li:first-child, div.oeuvres_list ul li:first-child{
+div.list_artistes ul li:first-child, div.oeuvres_list ul li:first-child,  div.list_oeuvres ul li:first-child{
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-div.list_artistes ul li:last-child,div.oeuvres_list ul li:last-child {
+div.list_artistes ul li:last-child,div.oeuvres_list ul li:last-child ,  div.list_oeuvres ul li:last-child{
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-right: 1px solid #d8d8d8;
 }
-div.list_artistes ul li.current, div.list_artistes ul li:hover {
+div.list_artistes ul li.current, div.list_artistes ul li:hover,  div.list_oeuvres ul li.current ,  div.list_oeuvres ul li:hover {
   background-color: #efefef;
   color: #10a0cb;
 }

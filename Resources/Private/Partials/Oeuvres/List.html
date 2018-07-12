@@ -6,21 +6,20 @@
 			<f:form.submit value="Rechercher.." class="col-md-4" />
 		</f:form>
 		<div class="clear"></div>
-	  <div class="list_artistes">
-	  <f:widget.paginate objects="{oeuvress}" as="paginatedOeuvres" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+	  <div class="list_oeuvres">
+	  <f:widget.paginate objects="{oeuvress}" as="paginatedOeuvres" configuration="{itemsPerPage: 3, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
 	  	<f:for each="{paginatedOeuvres}" as="oeuvre">
 	    <div class="col-md-4">
 	      <div class="panel panel-default card">
-	          <f:image image="{oeuvre.image}" class="author_thumbnail"/>
-	          <div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {oeuvre.intitule} </f:link.action>({oeuvre.date -> f:format.date()})</div>
-	          <div class="panel-body author">
+	          <f:image image="{oeuvre.image}" class="oeuvre_thumbnail"/>
+	          <div class="panel-heading"><f:link.action action="show" arguments="{oeuvres : oeuvre}"> {oeuvre.intitule} </f:link.action>({oeuvre.date -> f:format.date()})</div>
+	          <div class="panel-body oeuvre">
 	            <div class="biography"><f:format.html>{oeuvre.description}</f:format.html></div>
-	            <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
 							<p>{oeuvre.type.name}</p>
 							<p>{oeuvre.dimensions}</p>
 	          </div>
 	         <div class="panel-footer">
-             <f:link.action  class="btn btn-primary" arguments="{artiste : artiste}">Voir son auteur</f:link.action>
+             <f:link.action action="show"  class="btn btn-primary" arguments="{artiste : oeuvre.0.artiste}">Voir son auteur</f:link.action>
 	         </div>
 	      </div>
 	    </div>

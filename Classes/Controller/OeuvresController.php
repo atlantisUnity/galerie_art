@@ -48,7 +48,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function showAction(\Qnvt\ExpositionQnvt\Domain\Model\Oeuvres $oeuvres)
     {
-        $this->view->assign('oeuvres', $oeuvres);
+        $this->view->assign('oeuvre', $oeuvres);
     }
 
     /**
