@@ -1,37 +1,30 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	  <f:flashMessages />
 
-	<h1>Listing for Oeuvres</h1>
-
-	<f:flashMessages />
-	<f:form action="search" name="search" object="{search}">
-		<f:form.textfield property="intitule" />
-		<f:form.submit value="submit" />
-	</f:form>
-	<table  class="tx_expositionqnvt" >
-		<tr>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.intitule" /></th>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.date" /></th>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.description" /></th>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.type" /></th>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.dimensions" /></th>
-			<th><f:translate key="tx_expositionqnvt_domain_model_oeuvres.image" /></th>
-			<th> </th>
-			<th> </th>
-		</tr>
-		<f:for each="{oeuvress}" as="oeuvres">
-			<tr>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.intitule}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.date -> f:format.date()}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.description}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.type}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.dimensions}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.image.originalResource.name}</f:link.action></td>
-				<td><f:link.action action="edit" arguments="{oeuvres : oeuvres}">Edit</f:link.action></td>
-				<td><f:link.action action="delete" arguments="{oeuvres : oeuvres}">Delete</f:link.action></td>
-			</tr>
-		</f:for>
-	</table>
-
-	<f:link.action action="new">New Oeuvres</f:link.action>
-
+		<f:form action="search" name="search" object="{search}" class="col-md-4">
+			<f:form.textfield property="intitule" class="form-control" class="col-md-8" />
+			<f:form.submit value="Rechercher.." class="col-md-4" />
+		</f:form>
+		<div class="clear"></div>
+	  <div class="list_artistes">
+	  <f:widget.paginate objects="{oeuvress}" as="paginatedOeuvres" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+	  	<f:for each="{paginatedOeuvres}" as="oeuvre">
+	    <div class="col-md-4">
+	      <div class="panel panel-default card">
+	          <f:image image="{oeuvre.image}" class="author_thumbnail"/>
+	          <div class="panel-heading"><f:link.action action="show" arguments="{artiste : artiste}"> {oeuvre.intitule} </f:link.action>({oeuvre.date -> f:format.date()})</div>
+	          <div class="panel-body author">
+	            <div class="biography"><f:format.html>{oeuvre.description}</f:format.html></div>
+	            <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
+							<p>{oeuvre.type.name}</p>
+							<p>{oeuvre.dimensions}</p>
+	          </div>
+	         <div class="panel-footer">
+             <f:link.action  class="btn btn-primary" arguments="{artiste : artiste}">Voir son auteur</f:link.action>
+	         </div>
+	      </div>
+	    </div>
+	    </f:for>
+	    </f:widget.paginate>
+	  </div>
 </html>
