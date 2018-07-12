@@ -20,4 +20,12 @@ namespace Qnvt\ExpositionQnvt\Domain\Repository;
  */
 class ArtisteRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    /**
+     * @param $intitule
+     */
+    public function findByNom($nom)
+    {
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_expositionqnvt_domain_model_artiste');
+        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_artiste')->where($queryBuilder->expr()->like('nom', $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($nom) . '%')))->execute()->fetchAll();
     }
+}

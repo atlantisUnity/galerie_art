@@ -26,6 +26,6 @@ class ExpositionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findByNom($nom)
     {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_expositionqnvt_domain_model_exposition');
-        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_exposition')->where($queryBuilder->expr()->like('intitule', $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($nom) . '%')))->execute()->fetchAll();
+        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_exposition')->where($queryBuilder->expr()->like('nom', $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($nom) . '%')))->execute()->fetchAll();
     }
 }
