@@ -20,7 +20,7 @@ plugin.tx_expositionqnvt_pi1 {
         requireCHashArgumentForActionArguments = 1
     }
     mvc {
-        callDefaultActionIfActionCantBeResolved = 1
+        #callDefaultActionIfActionCantBeResolved = 1
     }
 }
 

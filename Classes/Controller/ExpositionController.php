@@ -59,10 +59,10 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     public function searchAction(\Qnvt\ExpositionQnvt\MVC\Search $search)
     {
         if (!empty($search->getIntitule())) {
-            $oeuvres = $this->expositionRepository->findByNom($search->getIntitule());
+            $expositions = $this->expositionRepository->findByNom($search->getIntitule());
         } else {
-            $oeuvres = $this->expositionRepository->findAll();
+            $expositions = $this->expositionRepository->findAll();
         }
-        $this->view->assign('oeuvres', $oeuvres);
+        $this->view->assign('expositions', $expositions);
     }
 }
