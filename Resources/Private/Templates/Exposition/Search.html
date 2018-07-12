@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:layout name="Default" />
 
 This Template is responsible for creating a table of domain objects.
@@ -12,7 +13,7 @@ List.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 <f:section name="main">
-<f:debug>{expositions}</f:debug>
+<f:debug>{oeuvres}</f:debug>
 <f:render partial="Exposition/List" arguments="{expositions: expositions}" />
 </f:section>
 </html>

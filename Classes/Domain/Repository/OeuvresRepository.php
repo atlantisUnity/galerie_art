@@ -22,29 +22,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class OeuvresRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-
     /**
      * @param $intitule
      */
     public function findByIntitule($intitule)
     {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_expositionqnvt_domain_model_oeuvres');
-        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_oeuvres')
-            ->where(
-                $queryBuilder->expr()->like(
-                    'intitule',
-                    $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($intitule) . '%'))
-            )->execute()->fetchAll();
-
-    }
-
-    public function findByType($type){
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_expositionqnvt_domain_model_oeuvres');
-        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_oeuvres')
-            ->where(
-                $queryBuilder->expr()->like(
-                    'intitule',
-                    $queryBuilder->createNamedParameter($type))
-            )->execute()->fetchAll();
+        return $queryBuilder->select('*')->from('tx_expositionqnvt_domain_model_oeuvres')->where($queryBuilder->expr()->like('intitule', $queryBuilder->createNamedParameter('%' . $queryBuilder->escapeLikeWildcards($intitule) . '%')))->execute()->fetchAll();
     }
 }
