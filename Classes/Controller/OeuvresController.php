@@ -69,24 +69,13 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function searchAction(\Qnvt\ExpositionQnvt\MVC\Search $search)
     {
-        $type = 0;
-        if(mb_strtoupper($search->getType()) == "PEINTURE"){
-            $type = 2;
-        }elseif (mb_strtoupper($search->getType()) == "SCULPTURE"){
-            $type = 1;
-        }
 
-        if (!empty($search->getIntitule()) && !empty($search->getType())) {
-            $oeuvres = $this->oeuvresRepository->findByIntituleAndType($search->getIntitule(),$type);
-        }
-        else if (!empty($search->getIntitule())) {
+
+        if (!empty($search->getIntitule())) {
             $oeuvres = $this->oeuvresRepository->findByIntitule($search->getIntitule());
         }
-        else if (!empty($search->getType())) {
-            $oeuvres = $this->oeuvresRepository->findByType($type);
-        }
         else {
-            $oeuvre = null;
+            $oeuvres = $this->oeuvresRepository->findAll();
         }
 
         $this->view->assign('oeuvres', $oeuvres);
