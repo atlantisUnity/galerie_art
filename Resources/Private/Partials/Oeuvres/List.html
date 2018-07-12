@@ -1,13 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	  <f:flashMessages />
 
-		<f:form action="search" name="search" object="{search}" class="col-md-4">
+		<f:form action="search" name="search" object="{search}" class="col-md-4 search">
 			<f:form.textfield property="intitule" class="form-control" class="col-md-8" />
 			<f:form.submit value="Rechercher.." class="col-md-4" />
 		</f:form>
 		<div class="clear"></div>
 	  <div class="list_oeuvres">
-	  <f:widget.paginate objects="{oeuvress}" as="paginatedOeuvres" configuration="{itemsPerPage: 3, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+	  <f:widget.paginate objects="{oeuvress}" as="paginatedOeuvres" configuration="{itemsPerPage: 6, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
 	  	<f:for each="{paginatedOeuvres}" as="oeuvre">
 	    <div class="col-md-4">
 	      <div class="panel panel-default card">

@@ -11,7 +11,6 @@ in /Configuration/ExtensionBuilder/settings.yaml:
         Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-<f:debug>{artiste}</f:debug>
 <f:section name="main">
 <div class="btn_return">
   <f:link.action action="list" class="btn btn-primary">Retour à la liste</f:link.action>
@@ -23,7 +22,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 </div>
   <div class="col-md-9 border_left">
 
-<div class="biography"><f:format.html>{artiste.biographie}</f:format.html></div>
+<div class="biography minH_70"><f:format.html>{artiste.biographie}</f:format.html></div>
 <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
 <i><f:format.html>{artiste.influences}</f:format.html></i>
 <b><f:translate key="tx_expositionqnvt_domain_model_artiste.nationalite" /> : </b>
