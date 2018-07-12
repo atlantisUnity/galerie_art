@@ -11,7 +11,7 @@ in /Configuration/ExtensionBuilder/settings.yaml:
         Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
+<f:debug>{artiste}</f:debug>
 <f:section name="main">
 <div class="btn_return">
   <f:link.action action="list" class="btn btn-primary">Retour à la liste</f:link.action>
@@ -21,7 +21,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <div class="col-md-3">
 <f:image image="{artiste.photo}" class="author_portrait"/>
 </div>
-  <div class="col-md-9">
+  <div class="col-md-9 border_left">
 
 <div class="biography"><f:format.html>{artiste.biographie}</f:format.html></div>
 <b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
@@ -29,7 +29,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <b><f:translate key="tx_expositionqnvt_domain_model_artiste.nationalite" /> : </b>
 <i><p>{artiste.nationalite.0.nom}<p></i>
 <div class="">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="oeuvres_list">
+    <p style="margin-bottom:30px;"><b>Ses oeuvres:</b></p>
+    <f:widget.paginate objects="{artiste.oeuvres}" as="paginatedOeuvres" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+    <f:for each="{paginatedOeuvres}" as="oeuvre">
+    <div class="col-md-3">
+      <f:link.page pageUid="57"  additionalParams="{tx_expositionqnvt_pi1: {oeuvres: oeuvre.uid, action: 'show'}}" ><f:image image="{oeuvre.image}" class="oeuvre_thumbnail"/></f:link.page>
+    </div>
+    </f:for>
+    </f:widget.paginate>
+  </div>
 </div>
 </div>
 	</f:section>

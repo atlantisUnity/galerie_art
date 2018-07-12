@@ -4,9 +4,10 @@
 		<f:form.textfield property="intitule" class="form-control" class="col-md-8" />
 		<f:form.submit value="Rechercher.." class="col-md-4" />
 	</f:form>
+	<div class="clear"></div>
 	<f:flashMessages />
 	<div class="list_artistes">
-		<f:widget.paginate objects="{artistes}" as="paginatedArtistes" configuration="{itemsPerPage: 1, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
+		<f:widget.paginate objects="{artistes}" as="paginatedArtistes" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 1}">
 			<f:for each="{paginatedArtistes}" as="artiste">
 				<div class="col-md-4">
 					<div class="panel panel-default card">

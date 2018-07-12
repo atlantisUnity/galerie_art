@@ -17,16 +17,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
   <f:link.action action="list" class="btn btn-primary">Retour à la liste</f:link.action>
 </div>
 <f:flashMessages />
-<h1 class="author_name"><b>{oeuvre.intitule}</b>&nbsp;<i>()</i></h1>
+<h1 class="author_name"><b>{oeuvre.intitule}</b>&nbsp;<i>({oeuvre.date -> f:format.date()})</i></h1>
     <div class="col-md-3">
 <f:image image="{oeuvre.image}" class="author_portrait"/>
 </div>
   <div class="col-md-9">
 
-<div class="biography"><f:format.html>{oeuvre.description}</f:format.html></div>
-<b><f:translate key="tx_expositionqnvt_domain_model_artiste.influences" /> : </b>
+<div class="biography"><f:format.html><b><f:translate key="tx_expositionqnvt_domain_model_oeuvres.description" /> : </b> </br>{oeuvre.description}</f:format.html></div>
+<b><f:translate key="tx_expositionqnvt_domain_model_oeuvres.type" /> : </b></br>
 <i><f:format.html>{oeuvre.type.intitule}</f:format.html></i>
-<b><f:translate key="tx_expositionqnvt_domain_model_artiste.nationalite" /> : </b>
+<b><f:translate key="tx_expositionqnvt_domain_model_oeuvres.dimensions" /> : </b>
 <i><p>{oeuvre.dimensions}<p></i>
 </div>
 	</f:section>

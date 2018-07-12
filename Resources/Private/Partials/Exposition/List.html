@@ -5,6 +5,7 @@
 		<f:form.textfield property="nom" class="form-control" class="col-md-8" />
 		<f:form.submit value="Rechercher.." class="col-md-4" />
 	</f:form>
+	<div class="clear"></div>
 	<f:for each="{expositions}" as="exposition">
 		<div class="expo">
 			<h2 class="expo_name"><f:link.action action="show" arguments="{exposition : exposition}">{exposition.nom}</f:link.action></h2>

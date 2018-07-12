@@ -14,13 +14,10 @@
 	          <f:image image="{oeuvre.image}" class="oeuvre_thumbnail"/>
 	          <div class="panel-heading"><f:link.action action="show" arguments="{oeuvres : oeuvre}"> {oeuvre.intitule} </f:link.action>({oeuvre.date -> f:format.date()})</div>
 	          <div class="panel-body oeuvre">
-	            <div class="biography"><f:format.html>{oeuvre.description}</f:format.html></div>
+	            <div class="biography"><b>Description:</b> </br><f:format.html>{oeuvre.description}</f:format.html></div>
 							<p>{oeuvre.type.name}</p>
 							<p>{oeuvre.dimensions}</p>
 	          </div>
-	         <div class="panel-footer">
-             <f:link.action action="show"  class="btn btn-primary" arguments="{artiste : oeuvre.0.artiste}">Voir son auteur</f:link.action>
-	         </div>
 	      </div>
 	    </div>
 	    </f:for>
